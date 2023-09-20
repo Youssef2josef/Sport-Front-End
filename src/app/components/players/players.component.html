@@ -1,0 +1,43 @@
+<app-banner [title]="title"></app-banner>
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="Player">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+      <div class="card text-white bg-success mb-3" style="max-width: 45%; min-width: 30%; margin: 3rem auto;">
+        <div class="card-header text-center">List Of Players</div>
+        <div class="card-body d-flex justify-content-around">
+            <img class="img-fluid" src="assets/images/ronaldo.png" alt="" width="100px" height="200px">
+            <img class="img-fluid" src="assets/images/messi.png" alt="" width="100px" height="200px">
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-around">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" *ngFor="let m of applySorting(players) | playerFilter :term" data-interval="15000">
+      <app-player [player]="m"></app-player>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

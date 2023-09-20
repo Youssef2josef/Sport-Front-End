@@ -1,0 +1,102 @@
+<app-banner [title]="title"></app-banner>
+
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <form #addTeamForm="ngForm" (ngSubmit)="addTeam()">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club Name</span>
+              </div>
+              <input type="text" class="form-control" [(ngModel)]="team.name" [ngModelOptions]="{standalone: true}"
+                placeholder="Team Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club Logo</span>
+              </div>
+              <input type="file" (change)="handleFileInput($event)" class="form-control" [(ngModel)]="team.logo"
+                [ngModelOptions]="{standalone: true}" placeholder="Staduim">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club Fondation</span>
+              </div>
+            <input type="text" class="form-control" [(ngModel)]="team.fondation" [ngModelOptions]="{standalone: true}"
+              placeholder="Fondation">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club President</span>
+              </div>
+            <input type="text" class="form-control" [(ngModel)]="team.owner" [ngModelOptions]="{standalone: true}"
+              placeholder="President">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club Position Info</span>
+              </div>
+            <input type="text" class="form-control" [(ngModel)]="team.pays" [ngModelOptions]="{standalone: true}"
+              placeholder="Country">
+              <input type="text" class="form-control" [(ngModel)]="team.city" [ngModelOptions]="{standalone: true}"
+              placeholder="City">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Staduim & Size</span>
+              </div>
+              <input type="text" class="form-control" [(ngModel)]="team.staduim" [ngModelOptions]="{standalone: true}"
+                placeholder="Name">
+              <input type="number" class="form-control" [(ngModel)]="team.staduimSize"
+                [ngModelOptions]="{standalone: true}" placeholder="Size" min=1000 max=99999999>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Staduim Image</span>
+              </div>
+              <input type="file" (change)="handleFileInput1($event)" class="form-control" [(ngModel)]="team.staduimImg"
+                [ngModelOptions]="{standalone: true}" placeholder="Staduim">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club Coach</span>
+              </div>
+            <input type="text" class="form-control" [(ngModel)]="team.coach" [ngModelOptions]="{standalone: true}"
+              placeholder="coach">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Club Rival</span>
+              </div>
+            <input type="text" class="form-control" [(ngModel)]="team.rival" [ngModelOptions]="{standalone: true}"
+              placeholder="rival">
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary py-3 px-5">Add team</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

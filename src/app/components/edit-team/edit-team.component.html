@@ -1,0 +1,68 @@
+<app-banner [title]="title"></app-banner>
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form #editTeamForm="ngForm" (ngSubmit)="editMatch()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="findedTeam.name"
+                            [ngModelOptions]="{standalone: true}" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Team Logo</span>
+                              </div>
+                        <input type="file" (change)="handleFileInput($event)" class="form-control" [(ngModel)]="findedTeam.logo"
+                            [ngModelOptions]="{standalone: true}" placeholder="Team Logo">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="findedTeam.fondation"
+                            [ngModelOptions]="{standalone: true}" placeholder="Fondation">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="findedTeam.owner"
+                            [ngModelOptions]="{standalone: true}" placeholder="Owner">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Staduim Image</span>
+                              </div>
+                        <input type="file" (change)="handleFileInput1($event)" class="form-control" [(ngModel)]="findedTeam.staduimImg"
+                            [ngModelOptions]="{standalone: true}" placeholder="StaduimName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="findedTeam.coach"
+                            [ngModelOptions]="{standalone: true}" placeholder="Coach">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" [(ngModel)]="findedTeam.pays"
+                                [ngModelOptions]="{standalone: true}" placeholder="pays">
+
+                            <input type="text" class="form-control" [(ngModel)]="findedTeam.city"
+                                [ngModelOptions]="{standalone: true}" placeholder="city">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" [(ngModel)]="findedTeam.staduim"
+                                [ngModelOptions]="{standalone: true}" placeholder="Staduim">
+
+                            <input type="number" class="form-control" [(ngModel)]="findedTeam.staduimSize"
+                                [ngModelOptions]="{standalone: true}" placeholder="Size" min=1000 max=99999999>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary py-3 px-5">Edit match</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

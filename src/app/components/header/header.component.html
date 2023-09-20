@@ -1,0 +1,68 @@
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+<header class="site-navbar py-4" role="banner">
+
+  <div class="container">
+    <div class="d-flex align-items-center">
+      <div class="site-logo">
+        <a routerLink="/">
+          <img src="assets/images/logo.png" alt="Logo">
+        </a>
+      </div>
+      <div class="ml-auto">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li class="active"><a routerLink="/" class="nav-link">Home</a></li>
+            <li><a routerLink="dashboardClient" class="nav-link">dashboard</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink="#" role="button" aria-haspopup="true"
+                aria-expanded="false">Sections</a>
+              <div class="dropdown-menu">
+                <a routerLink="matches" class="nav-link">Matches</a>
+                <div class="dropdown-divider"></div>
+                <a routerLink="teams" class="nav-link">Teams</a>
+                <div class="dropdown-divider"></div>
+                <a routerLink="players" class="nav-link">Players</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown" *ngIf="addingSectionVisible">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink="#" role="button" aria-haspopup="true"
+                aria-expanded="false">Adding-Section</a>
+              <div class="dropdown-menu">
+                <a routerLink="addMatch" class="nav-link">addMatch</a>
+                <div class="dropdown-divider"></div>
+                <a routerLink="addTeam" class="nav-link">addTeam</a>
+                <div class="dropdown-divider"></div>
+                <a routerLink="addPlayer" class="nav-link">addPlayer</a>
+              </div>
+            </li>
+            
+            <li><a routerLink="contact" class="nav-link">Contact</a></li>   
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink="#" role="button" aria-haspopup="true"
+                aria-expanded="false">connection</a>
+              <div class="dropdown-menu">
+                <a routerLink="login" class="nav-link">Login</a>
+                <div class="dropdown-divider"></div>
+                <a routerLink="signup" class="nav-link">Sign Up</a>
+              </div>
+            </li>       
+          </ul>
+        </nav>
+        <a routerLink="#"
+          class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white">
+          <span class="icon-menu h3 text-white">
+            
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</header>

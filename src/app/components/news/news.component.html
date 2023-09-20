@@ -1,0 +1,17 @@
+<div class="latest-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 title-section">
+          <h2 class="heading">Latest {{count}}</h2>
+          <button class="btn btn-info" (click)="setCount()">save</button>
+
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-md-4" *ngFor="let t of Tab">
+          <app-news-info></app-news-info>
+        </div>
+      </div>
+
+    </div>
+</div>

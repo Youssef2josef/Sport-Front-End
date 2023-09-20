@@ -1,0 +1,30 @@
+<div class="table-responsive text-nowrap">
+<table class="table table-striped">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>fondation</th>
+        <th>owner</th>
+        <th>staduim</th>
+        <th>Actions</th>
+        <th>
+            <button type="button" class="btn btn-round btn-success" (click)="goToAdd()">
+                Add Team
+            </button>
+        </th>
+    </tr>
+    <tr *ngFor="let m of teamsTab">
+        <td>{{m.id}}</td>
+        <td>{{m.name}}</td>
+        <td>{{m.fondation}}</td>
+        <td>{{m.owner}}</td>
+        <td>{{m.staduim}}</td>
+        <td>
+            <button class="btn btn-info" (click)="goToDipslay(m.id)">Display</button>
+            <button class="btn btn-warning" (click)="goToEdit(m.id)">Edit</button>
+            <app-delete-team [team]="m" (xTeam)="deleteTeam($event)"></app-delete-team>
+        </td>
+        <td></td>
+    </tr>
+</table>
+</div>

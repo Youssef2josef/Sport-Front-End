@@ -1,0 +1,30 @@
+<div class="card-group">
+  <div class="card card text-white bg-success">
+    <img src="{{srcLogo}}" class="card-img-top" height="360px" alt="Team Logo"/>
+    <div class="card-body">
+      <h5 class="card-title">{{team.name}}</h5>
+        <p class="card-text">
+          Fondation : {{team.fondation}}<br>
+          President : {{team.owner}}<br>
+          Coach : {{team.coach}}<br>
+          Rival : {{team.rival}}<br> 
+        </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card text-black">
+    <img src="{{srcStaduim}}" class="card-img-top" height="360px" alt="Team Staduim"/>
+    <div class="card-body">
+      <h5 class="card-title text-black">{{team.staduim}}</h5>
+        <p class="card-text">Country : {{team.city}}<br>
+          City : {{team.city}}<br>
+          Number of Places : {{team.staduimSize}}<br>
+        </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>

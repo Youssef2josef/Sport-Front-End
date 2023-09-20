@@ -1,0 +1,97 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+th {
+    color: red;
+    font-size: 1rem;
+    /* Taille de police personnalisée */
+    font-family: Arial, sans-serif;
+    /* Police personnalisée */
+    text-align: left;
+    /* Centre le texte horizontalement */
+    padding: 12px 8px;
+    /* Espacement interne pour le contenu */
+    position: sticky;
+    /* Fixe le header au sommet du tableau */
+    top: 0;
+    z-index: 2;
+    /* Pour que le header reste au-dessus du contenu */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    /* Légère ombre pour la profondeur */
+}
+
+tr:nth-child(even) td {
+    background-color: #dae9f6;
+    /* Couleur bleu ciel pour les lignes paires */
+}
+
+tr:nth-child(odd) td {
+    background-color: #e6e6e6;
+    /* Couleur plus foncée pour les lignes impaires */
+}
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Ajoutez ces règles CSS à votre code de styles existant */
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    /* Couleur de fond pour les boutons */
+    color: #fff;
+    /* Couleur du texte pour les boutons */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Ajoute une transition fluide */
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+    /* Couleur de fond au survol */
+    color: #fff;
+    /* Couleur du texte au survol */
+}
+
+/* Ajoutez ces règles CSS à votre code de styles existant */
+
+.search-container {
+    margin: 5px;
+    display: flex;
+    justify-content: right;
+    /* Centre horizontalement les éléments */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    margin-top: 10px;
+}
+
+.search-input {
+    /* Ajoutez d'autres styles si nécessaires */
+    text-align: left;
+    /* Centre le texte à l'intérieur de l'input */
+}

@@ -1,0 +1,32 @@
+<div class="table-responsive text-nowrap">
+<table class="table table-striped">
+    <tr>
+        <th class="th-sm">id</th>
+        <th class="th-sm">name</th>
+        <th class="th-sm">position</th>
+        <th class="th-sm">numéro</th>
+        <th class="th-sm">age</th>
+        <th class="th-sm">Actions</th>
+        <th>
+            <button type="button" class="btn btn-round btn-success btn-sm" (click)="goToAdd()">
+                Add Player
+            </button>
+        </th>
+    </tr>
+    <tr *ngFor="let m of playersTab">
+        <td class="td-sm">{{m.id}}</td>
+        <td class="td-sm">{{m.name}}</td>
+        <td class="td-sm">{{m.position}}</td>
+        <td class="td-sm">{{m.nbr}}</td>
+        <td class="td-sm">{{m.age}}</td>
+        <td>
+            <div class="btn-group" role="group">
+                <button class="btn btn-info btn-sm" (click)="goToDipslay(m.id)">display</button>
+                <button class="btn btn-warning btn-sm" (click)="goToEdit(m.id)">edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deletePlayer(m.id)">delete</button>
+                </div>
+        </td>
+        <td></td>
+    </tr>
+</table>
+</div>

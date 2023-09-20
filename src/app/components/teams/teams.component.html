@@ -1,0 +1,16 @@
+<app-banner [title]="'Teams'"></app-banner>
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="term" [ngModelOptions]="{standalone: true}"
+                        placeholder="Team One">
+                </div>
+            </div>
+            <div class="col-lg-12 mb-3" *ngFor="let m of teams | teamFilter :term">
+                <app-team [team]="m"></app-team>
+            </div>
+        </div>
+    </div>
+</div>

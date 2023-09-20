@@ -1,0 +1,41 @@
+<div class="search-container">
+    <button type="button" class="btn btn-primary">
+        Every page is separated <span class="badge badge-light"></span>
+    </button>
+
+    <input type="search" [(ngModel)]="term" placeholder="Search" class="search-input">
+    <span class="search-icon">
+        <img [src]="icon">
+    </span>
+</div>
+<!--<table class="table">-->
+<table>
+    <thead>
+        <tr>
+            <th (click)="sortTable('id')">ID <span *ngIf="sortedColumn === 'id'">{{ sortDirection === 'asc' ? '▲' : '▼'
+                    }}</span></th>
+            <th (click)="sortTable('teamOne')">Team One <span *ngIf="sortedColumn === 'teamOne'">{{ sortDirection === 'asc' ? '▲'
+                    :
+                    '▼' }}</span></th>
+            <th (click)="sortTable('teamTwo')">Team Two <span *ngIf="sortedColumn === 'teamTwo'">{{ sortDirection ===
+                    'asc' ? '▲' : '▼' }}</span></th>
+            <th (click)="sortTable('scoreOne')">Score One <span *ngIf="sortedColumn === 'scoreOne'">{{ sortDirection === 'asc' ? '▲'
+                    :
+                    '▼' }}</span></th>
+            <th (click)="sortTable('scoreTwo')">Score Two <span *ngIf="sortedColumn === 'scoreTwo'">{{ sortDirection === 'asc' ? '▲' : '▼'
+                    }}</span></th>
+        </tr>
+    </thead>
+    <tr *ngFor="let m of applySorting(pagedItems | playerFilter:term)">
+        <td>{{m.id}}</td>
+        <td>{{m.teamOne}}</td>
+        <td>{{m.teamTwo}}</td>
+        <td>{{m.scoreOne}}</td>
+        <td>{{m.scoreTwo}}</td>
+    </tr>
+</table>
+<div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
